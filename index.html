@@ -266,7 +266,21 @@ margin-right: 100px;
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Cydia</title>
 </head>
-
+<h5 class="date" id="demo"></h5>
+      <script>
+                                                                 var mydate=new Date()
+                                                                 var year=mydate.getYear()
+                                                                 var day=mydate.getDay()
+                                                                 var month=mydate.getMonth()
+                                                                 var daym=mydate.getDate()
+                                                                 if (daym<10)
+                                                                   daym="0"+daym
+                                                                 var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+                                                                 var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+                                                                 document.write("<font color='777777'>"+dayarray[day]+", "+montharray[month]+" "+daym+"<\/font>")
+      </script>
+  <font  color="777777" class></font>
+    </h5>
 <body onload="getVersion()">
 <h5 class="date" id="demo"></h5>
 <a href=" " target="_blank"><div class="reddit1"><img class="cardimg" src="img/wcydia.png"/></div></a>
@@ -344,56 +358,10 @@ margin-right: 100px;
 <p id="desc"> CydiaPro</p>
 <br>
 	
-<h5 class="date" id="demo"></h5>
-      <script>
-                                                                 var mydate=new Date()
-                                                                 var year=mydate.getYear()
-                                                                 var day=mydate.getDay()
-                                                                 var month=mydate.getMonth()
-                                                                 var daym=mydate.getDate()
-                                                                 if (daym<10)
-                                                                   daym="0"+daym
-                                                                 var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
-                                                                 var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
-                                                                 document.write("<font color='777777'>"+dayarray[day]+", "+montharray[month]+" "+daym+"<\/font>")
-      </script>
-  <font  color="777777" class></font>
-    </h5>
 
 
-<script>
-function getToday() {
-    var d = new Date();
-    var weekday = new Array(7);
-    weekday[0] = "SUNDAY";
-    weekday[1] = "MONDAY";
-    weekday[2] = "TUESDAY";
-    weekday[3] = "WEDNESDAY";
-    weekday[4] = "THURSDAY";
-    weekday[5] = "FRIDAY";
-    weekday[6] = "SATURDAY";
 
-		var month = new Array();
-    month[0] = "JANUARY";
-    month[1] = "FEBRUARY";
-    month[2] = "MARCH";
-    month[3] = "APRIL";
-    month[4] = "MAY";
-    month[5] = "JUNE";
-    month[6] = "JULY";
-    month[7] = "AUGUST";
-    month[8] = "SEPTEMBER";
-    month[9] = "OCTOBER";
-    month[10] = "NOVEMBER";
-    month[11] = "DECEMBER";
 
-    var n1 = weekday[d.getDay()];
-		var n2 = d.getDate();
-		var n3 = month[d.getMonth()];
-    document.getElementById("demo").innerHTML = n1 + " " + n2 + " " + n3;
-}
-
-window.addEventListener("load", getToday, true);
 </script>
 </body>
 </html>
